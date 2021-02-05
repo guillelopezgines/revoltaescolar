@@ -2,34 +2,46 @@
   font-family: "Ursula";
   src: url("fonts/ursula.otf") format("opentype");
 }
-
 @font-face {
   font-family: "Ursula Bold";
   src: url("fonts/ursula-bold.otf") format("opentype");
 }
-
-html, body{
-  background: #efefef;
-  height: 100%;
-  overflow: hidden;
-  text-rendering: optimizeSpeed;
+body.tool {
+  background: grey;
 }
+.layout {
+  display: flex;
+}
+.right {
+  width: 100%;
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+}
+.container{
+  margin: 20px;
+  transform-origin: 0 0;
 
+  /* ratio: 1685/2382 */
+  transform: scale(0.319059614);
+  width: 537px;
+  height: 760px;
+
+  transform: scale(0.293870697);
+  width: 495px;
+  height: 700px;
+}
 .poster {
   display: block;
-  margin: 0 auto;
-  position: absolute;
+  position: relative;
   background: white;
   width: 1685px;
   height: 2382px;
-  left: -1685px;
 }
-
 .poster img {
   height: 100%;
   width: 100%;
 }
-
 .poster .subtitle {
   position: absolute;
   font-family: 'Ursula';
@@ -41,7 +53,6 @@ html, body{
   text-align: center;
   text-transform: none;
 }
-
 .poster .info {
   position: absolute;
   font-family: 'Ursula';
@@ -54,12 +65,10 @@ html, body{
   text-align: left;
   text-transform: none;
 }
-
 .poster .info b {
   font-family: 'Ursula Bold';
   font-weight: normal;
 }
-
 .poster .logos {
   position: absolute;
   top: 2040px;
@@ -99,27 +108,21 @@ html, body{
   height: 220px;
   width: auto;
   display: block;
-  float: left;
   margin-right: 30px;
 }
-/* order */
-.support-er,
-.support-affac{
+.poster .support-er,
+.poster .support-affac{
   order: 2;
 }
 
-.destination {
-  float: left;
-}
-
-.destination img {
-  max-width: 100%;
+.render {
+  /*position: fixed;*/
 }
 
 .setup {
   padding: 20px;
-  height: 100%;
-  overflow: scroll;
+  width: 100%;
+  background: #efefef;
 }
 
 .setup h1 {
@@ -165,11 +168,14 @@ html, body{
   margin-right: 10px;
 }
 .setup .checkbox {
-  font-family: "Open Sans", sans-serif;
-  text-transform: none;
-  font-size: 20px;
   display: block;
   margin: 10px 0;
+}
+.setup .checkbox label {
+  font-family: "Open Sans", sans-serif;
+  text-transform: none;
+  font-size: 16px;
+  display: inline-block;
 }
 
 .setup .download{
@@ -186,6 +192,9 @@ html, body{
 }
 
 @media (max-width: 940px) {
+  html, body{
+    overflow: auto;
+  }
   body {
     text-align: left;
   }

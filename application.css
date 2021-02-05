@@ -10,6 +10,7 @@ html {
   color: #000;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
 }
 html, body{
   font-size: 100%;

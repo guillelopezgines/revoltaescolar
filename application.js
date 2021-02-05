@@ -2,10 +2,9 @@ var
   timeout,
   render = function() {
     html2canvas(document.querySelector(".poster")).then(canvas => {
-      // Canvas2Image.saveAsPNG(canvas, 2 * 1685, 2 * 2382);
-      document.getElementById("destination").innerHTML = "";
+      $('.render').html("");
       canvas.setAttribute('id', 'canvas');
-      document.getElementById("destination").appendChild(canvas);
+      $('.render').append(canvas);
       resize();
     });
   },
@@ -32,28 +31,35 @@ var
 
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
+
+    $('.setup').width(window.innerWidth - width - 40);
   };
 
 $(document).ready(function() {
-  window.addEventListener('resize', resize, false);
-  render();
-  $('[type=text][data-element]').on('keyup', function(e){
-    var el = $(this).attr('data-element');
+  // render();
+  // window.addEventListener('resize', resize, false);
+  $(".container").stick_in_parent();
+  $('[type=text][data-target]').on('keyup', function(e){
+    var el = $(this).attr('data-target');
     $(el).html($(this).val());
-    render_with_timeout();
-  }),
-  $('[type=checkbox][data-element]').on('change', function(e){
-    var el = $(this).attr('data-element');
+    // render_with_timeout();
+  });
+  $('select[data-target]').on('change', function(e){
+    var el = $(this).attr('data-target');
+    $(el).html($(this).val());
+  });
+  $('[type=checkbox][data-target]').on('change', function(e){
+    var el = $(this).attr('data-target');
     if($(this).prop("checked")){
       $(el).show();
     } else {
       $(el).hide();
     }
     render();
-  }),
-  $('[type=file][data-element][data-parent]').on('change', function(e){
+  });
+  $('[type=file][data-target][data-parent]').on('change', function(e){
     var input = this,
-        el = $(this).attr('data-element'),
+        el = $(this).attr('data-target'),
         $el = $(el),
         $parent = $($(this).attr('data-parent'));
     if (input.files && input.files[0]) {
