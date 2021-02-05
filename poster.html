@@ -1,64 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>#SchoolsRevolt poster creation tool</title>
-  <meta name="description" content="Claiming safe and healthy school environments!">
+  <title>Afegeix-te a la #RevoltaEscolar</title>
+  <meta name="description" content="Per uns entorns escolars segurs i pacificats!">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <!-- <meta property="og:title" content="Confinem els cotxes, recuperem la ciutat!"/>
-  <meta property="og:description" content="Demanem un pla de desconfinament en què es prioritzin les persones i la mobilitat justa i sostenible envers l'ús del vehicle privat.">
-  <meta property="og:url" content="https://www.recuperemlaciutat.com"/>
-  <meta property="og:image" content="https://www.recuperemlaciutat.com/images/sharing.jpg"/>
-  <meta property="og:site_name" content="Confinem els cotxes, recuperem la ciutat!"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="player" />
-  <meta name="twitter:player" content="https://www.youtube.com/embed/pp81l6qXdHY">
-  <meta name="twitter:player:width" content="1280">
-  <meta name="twitter:player:height" content="720">
-  <meta name="twitter:image" content="https://www.recuperemlaciutat.com/images/sharing.jpg"> -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-  <script src="js/html2canvas.min.js"></script>
-  <script src="js/canvas2image.js"></script>
-  <script src="application.js?v=18"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="application.css?v=19" media="all" rel="stylesheet" />
-
+  <link href="/application.css?v=1" media="all" rel="stylesheet" />
+  <link href="/tool.css?v=1" media="all" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="/js/html2canvas.min.js"></script>
+  <script src="/js/canvas2image.js"></script>
+  <script src="/application.js?v=1"></script>
 </head>
 <body>
-  <div class="tool" style="width: 100%; height: 100vh; overflow: hidden; display: flex; display-direction: row; background: white;">
-    <div class="left" style="max-width: 40%; background: #efefef; display: flex; justify-content: center; align-items: center;">
-      <div id="poster" style="max-width: 100%; padding: 0px; position: relative;">
-        <img src="images/poster.jpg" style="max-width: 100%;">
-        <h1 id="title" style="position: absolute; left: 20px; top: 20px;">Hola</h1>
-        <img src="images/logo.jpg" id="blah" width=130 style="position: absolute; right: 20px; bottom: 20px;">       
+  <div class="poster">
+    <img class="background" src="/images/base.svg">
+    <div class="text subtitle">tallem el carrer Perú</div>
+    <div class="text info">
+      <b><span class="date">Divendres 12 de febrer</span></b><br>
+      <b><span class="time">16.30</span> h</b><br>
+      <span class="location">Perú entre Selva de Mar i Fluvià</span><br>
+      Durada: <span class="duration">30 minuts</span>
+    </div>
+    <div class="logos">
+      <div class="section summons">
+        <div class="text">Convoca:</div>
+        <div class="images">
+          <img src="/images/logo-afa.jpg" class="summons-1">
+        </div>
+      </div>
+      <div class="section support">
+        <div class="text">Amb el suport:</div>
+        <div class="images">
+          <img src="/images/logo-eixample-respira.png" class="support-er">
+          <img src="/images/logo-affac.png" class="support-affac">
+        </div>
       </div>
     </div>
-    <div class="right" style="flex-grow: 2; padding: 40px; overflow: scroll;">
-      <h1 style="color: black; text-align: left; font: bold 50px/1.1 'oswald';">Create your<br>school's poster:</h1>
-      <div class="row" style="margin-bottom: 20px;">
-        <label style="color: black; text-align: left; font: bold 20px/1.1 'oswald'; display: block; margin-bottom: 10px;">Pick your language:</label>
-        <select style="font-size: 20px; padding: 10px; display: block; width: 100%;">
-          <!-- <option>English</option> -->
-          <!-- <option>Español</option> -->
-          <option>Català</option>
-        </select>
-      </div>
-      <div class="row" style="margin-bottom: 20px;">
-        <label style="color: black; text-align: left; font: bold 20px/1.1 'oswald'; display: block; margin-bottom: 10px;">Specify Your action:</label>
-        <input type="text" name="action" style="width: 100%; font-size: 20px; padding: 10px;" placeholder="tallem el carrer de Magnion">
-      </div>
-      <div class="row" style="margin-bottom: 20px;">
-        <label style="color: black; text-align: left; font: bold 20px/1.1 'oswald'; display: block; margin-bottom: 10px;">Upload Your logo:</label>
-        <input type="file" name="action" style="width: 100%; font-size: 20px; padding: 10px;">
-      </div>
-      <div class="row" style="margin-bottom: 20px;">
-        <a href="" download="poster.jpg" style="text-decoration: none; color: black; display: block; text-align: center; color: white; background: black; border-radius: 5px; width: 100%; font-size: 20px; padding: 10px;" data-action="download">Download your poster image</a>
-      </div>
+    <!-- <img src="images/logo.jpg" id="blah" width=130 style="position: absolute; right: 20px; bottom: 20px;">        -->
+  </div>
+  <div class="destination" id="destination">
+    <img src="/images/base.svg">
+  </div>
 
+  <div class="setup">
+    <h1>DESCARREGA'T EL CARTELL:</h1>
+    <div class="row">
+      <label>Idioma:</label>
+      <select>
+        <option>Català</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>Subtítol:</label>
+      <input type="text" data-element=".poster .subtitle" name="action" placeholder="tallem el carrer Perú">
+    </div>
+    <div class="row">
+      <label>Dia:</label>
+      <input type="text" data-element=".poster .date" name="action" placeholder="Divendres 12 de febrer">
+    </div>
+    <div class="row">
+      <label>Hora:</label>
+      <input type="text" data-element=".poster .time" name="action" placeholder="16.30">
+    </div>
+    <div class="row">
+      <label>Localització:</label>
+      <input type="text" data-element=".poster .location" name="action" placeholder="Perú entre Selva de Mar i Fluvià">
+    </div>
+    <div class="row">
+      <label>Durada:</label>
+      <input type="text" data-element=".poster .duration" name="action" placeholder="30 minuts">
+    </div>
+    <div class="row">
+      <label>Logotip entitats convocants:</label>
+      <input type="file" data-element=".summons-1" data-parent=".summons .images"/>
+      <input type="file" data-element=".summons-2" data-parent=".summons .images"/>
+      <input type="file" data-element=".summons-3" data-parent=".summons .images"/>
+    </div>
+    <div class="row">
+      <label>Logotip entitats que donen suport:</label>
+      <input type="file" data-element=".support-1" data-parent=".support .images"/>
+      <input type="file" data-element=".support-2" data-parent=".support .images"/>
+      <input type="file" data-element=".support-3" data-parent=".support .images"/>
+      <input type="file" data-element=".support-4" data-parent=".support .images"/>
+      <div class="checkbox">
+        <input type="checkbox" checked data-element=".support-er"/>
+        Eixample Respira
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" checked data-element=".support-affac"/>
+        aFFac
+      </div>
+    </div>
+    <div class="row">
+      <a class="download" href="" download="poster.jpg" data-action="download">Descarregar poster</a>
     </div>
   </div>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165033721-1"></script>
