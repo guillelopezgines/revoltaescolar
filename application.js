@@ -38,7 +38,6 @@ var
 $(document).ready(function() {
   // render();
   // window.addEventListener('resize', resize, false);
-  $(".container").stick_in_parent();
   $('[type=text][data-target]').on('keyup', function(e){
     var el = $(this).attr('data-target');
     $(el).html($(this).val());
