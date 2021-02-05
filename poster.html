@@ -8,74 +8,79 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="/application.css?v=1" media="all" rel="stylesheet" />
-  <link href="/tool.css?v=1" media="all" rel="stylesheet" />
+  <link href="/application.css?v=4" media="all" rel="stylesheet" />
+  <link href="/tool.css?v=4" media="all" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
   <script src="/js/html2canvas.min.js"></script>
   <script src="/js/canvas2image.js"></script>
   <script src="/js/sticky-kit.min.js"></script>
-  <script src="/application.js?v=1"></script>
+  <script src="/application.js?v=3"></script>
 </head>
 <body class="tool">
   <div class="layout">
     <div class="setup">
-      <h1>DISSENYA EL CARTELL<br>PER LA TEVA ESCOLA:</h1>
+      <a href="/" class="back">⬅ Tornar</a>
+      <h1>DESCARREGA'T EL CARTELL PER CONVOCAR AL TALL DE CARRER:</h1>
       <p style="margin: 0 0 10px; padding: 0; text-align: left; ">Omple tots els camps i descarrega't la imatge del cartell.</p>
       <div class="row">
-        <label>Idioma:</label>
-        <select>
-          <option>Català</option>
-        </select>
-      </div>
-      <div class="row">
-        <label>Subtítol:</label>
-        <input type="text" data-target=".poster .subtitle" name="action" placeholder="tallem el carrer Perú">
+        <label>Acció reivindicativa:</label>
+        <input type="text" data-target=".poster .subtitle" placeholder="tallem el carrer Perú">
       </div>
       <div class="row">
         <label>Dia:</label>
-        <select data-target=".poster .date">
-          <option>Divendres 12 de febrer</option>
-          <option>Divendres 26 de febrer</option>
-          <option>Divendres 12 de març</option>
-          <option>Divendres 26 de març</option>
-        </select>
+        <div class="shopify-select">
+          <select data-target=".poster .date">
+            <option>Divendres 12 de febrer</option>
+            <option>Divendres 26 de febrer</option>
+            <option>Divendres 12 de març</option>
+            <option>Divendres 26 de març</option>
+          </select>
+          <svg class="shopify-select-icon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+        </div>
       </div>
       <div class="row">
         <label>Hora:</label>
-        <select data-target=".poster .time">
-          <option>16.00</option>
-          <option>16.15</option>
-          <option selected>16.30</option>
-          <option>16.45</option>
-          <option>17.00</option>
-        </select>
+        <div class="shopify-select">
+          <select data-target=".poster .time">
+            <option>16.00</option>
+            <option>16.15</option>
+            <option selected>16.30</option>
+            <option>16.45</option>
+            <option>17.00</option>
+          </select>
+          <svg class="shopify-select-icon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+        </div>
       </div>
       <div class="row">
         <label>Localització:</label>
-        <input type="text" data-target=".poster .location" name="action" placeholder="Perú entre Selva de Mar i Fluvià">
+        <input type="text" data-target=".poster .location" maxlength="38" placeholder="Perú entre Selva de Mar i Fluvià">
       </div>
       <div class="row">
         <label>Durada:</label>
-        <select data-target=".poster .duration">
-          <option>30 minuts</option>
-          <option>45 minuts</option>
-          <option>1 hora</option>
-          <option>2 hores</option>
-        </select>
+        <div class="shopify-select">
+          <select data-target=".poster .duration">
+            <option>30 minuts</option>
+            <option>45 minuts</option>
+            <option>1 hora</option>
+            <option>2 hores</option>
+          </select>
+          <svg class="shopify-select-icon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+        </div>
       </div>
       <div class="row">
         <label>Logotip entitats convocants:</label>
-        <input type="file" data-target=".summons-1" data-parent=".summons .images"/>
-        <input type="file" data-target=".summons-2" data-parent=".summons .images"/>
-        <input type="file" data-target=".summons-3" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-1" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-2" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-3" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-4" data-parent=".summons .images"/>
       </div>
       <div class="row">
         <label>Logotip entitats que donen suport:</label>
-        <input type="file" data-target=".support-1" data-parent=".support .images"/>
-        <input type="file" data-target=".support-2" data-parent=".support .images"/>
-        <input type="file" data-target=".support-3" data-parent=".support .images"/>
-        <input type="file" data-target=".support-4" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-1" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-2" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-3" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-4" data-parent=".support .images"/>
         <div class="checkbox">
           <input type="checkbox" checked data-target=".support-er" id="er" />
           <label for="er">Eixample Respira</label>
@@ -86,7 +91,7 @@
         </div>
       </div>
       <div class="row">
-        <a class="download" href="" download="poster.jpg" data-action="download">Descarregar poster</a>
+        <a class="download" href="" download="poster.jpg" data-action="download">Descarregar</a>
       </div>
     </div>
     <div class="right">

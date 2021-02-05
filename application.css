@@ -60,7 +60,7 @@ body {
   background: #67A5B5;
   padding-bottom: 20px;
 }
-.text {
+.index .text {
   max-width: 870px;
   margin: 0 auto;
 }
@@ -83,7 +83,7 @@ h1 {
   text-align: center;
   font: bold 80px/1.1 'oswald';
 }
-img {
+.index img {
   max-width: 100%;
   margin: 0 auto;
 }
@@ -231,7 +231,7 @@ p a {
   color: black;
 }
 
-@media (max-width: 720px){
+@media (max-width: 900px){
   h1 {
     font-size: 36px;
   }
@@ -243,6 +243,6 @@ p a {
   }
   .button a{
     font-size: 20px;
-    padding: 18px 30px 14px;
+    padding: 10px;
   }
 }
