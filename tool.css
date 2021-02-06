@@ -157,6 +157,14 @@ body.downloading {
   margin: 0;
 }
 
+.setup p {
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .setup .row {
   margin-bottom: 20px;
 }
