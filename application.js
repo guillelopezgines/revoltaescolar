@@ -49,7 +49,9 @@ $(document).ready(function() {
       e.preventDefault();
       $('body,html').animate({ scrollTop: 0 }, { duration: 0 });
       $('body').addClass('downloading');
-      html2canvas(document.querySelector(".poster")).then(canvas => {
+
+      var scale = window.is_touch_device && $(window).width() <= 500 ? 0.5 : 1;
+      html2canvas(document.querySelector(".poster"), {scale: scale}).then(canvas => {
         Canvas2Image.saveAsPNG(canvas, 2 * 1685, 2 * 2382);
         $('body').removeClass('downloading');
       });
