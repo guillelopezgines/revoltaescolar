@@ -36,7 +36,7 @@ body {
 .inner{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 40px;
 }
 .banner {
   background: #67A5B5;
@@ -144,16 +144,15 @@ p a {
 }
 .footer {
   background: #67CFCB;
-  padding: 60px 20px;
+  background: white;
+  padding: 40px 20px;
   text-align: center;
   width: 100%;
   overflow: hidden;
 }
-.footer .inner {
-  max-width: 1000px;
-}
 .footer h2 {
   color: black;
+  margin-bottom: 40px;
 }
 .footer h4 {
   font-size: 34px;
@@ -170,7 +169,6 @@ p a {
   height: 80px;
   display: inline-block;
   margin: 20px;
-  filter: grayscale(100%);
 }
 .footer .logos img.big {
   height: 100px;
@@ -218,7 +216,7 @@ p a {
   display: block;
 }
 .bottom {
-  background: #04B7B1;
+  background: #67A5B5;
   text-align: center;
   padding: 50px 20px 40px;
 }
@@ -228,7 +226,9 @@ p a {
 .bottom h3{
   display: inline-block;
   font-size: 77px;
-  color: black;
+  color: white;
+  font: bold 40px/1.1 'oswald';
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px){
@@ -244,5 +244,15 @@ p a {
   .button a{
     font-size: 20px;
     padding: 10px;
+  }
+}
+
+@media (max-width: 820px){
+  .footer .inner{
+    padding: 0 0 40px;
+  }
+  .footer .logos img{
+    height: 50px;
+    margin: 10px;
   }
 }
