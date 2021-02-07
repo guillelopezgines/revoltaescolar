@@ -142,6 +142,32 @@ p a {
 .menu .button:last-child {
   margin-right: 0;
 }
+.talls {
+  background: #7BC4D6;
+  padding: 40px 0;
+}
+.talls .inner {
+  max-width: 800px;
+}
+.talls h2.city {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.talls ol {
+  margin-top: 30px;
+}
+.talls li {
+  margin-left: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  line-height: 40px;
+}
+.talls li u{
+  font-weight: bold;
+}
 .footer {
   background: #67CFCB;
   background: white;
