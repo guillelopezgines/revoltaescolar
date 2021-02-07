@@ -156,6 +156,11 @@ p a {
   margin-bottom: 20px;
   font-size: 24px;
 }
+.talls img {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+}
 .talls ol {
   margin-top: 30px;
 }
