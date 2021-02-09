@@ -48,12 +48,19 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-.banner .lang {
-  /*float: right;*/
+.lang {
+  text-align: center;
+  margin: 20px 0;
 }
-.banner .lang a {
-  font-size: 20px;
-  padding: 0 5px;
+.lang a {
+  font: bold 24px/1.2 'oswald';
+  padding: 0 10px;
+  color: #231F20;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lang a:hover {
+  text-decoration: underline;
 }
 .page {
   background: white;
@@ -65,12 +72,15 @@ body {
   margin: 0 auto;
 }
 h2 {
-  margin: 20px auto 10px;
+  margin: auto 0px;
   font: bold 30px/1.2 'oswald';
   text-align: center;
   text-decoration: underline;
   color: #231F20;
   text-transform: uppercase;
+}
+h2.section {
+  margin-top: 40px;
 }
 h1 {
   font-size: 60px;
@@ -94,7 +104,9 @@ p {
   margin: 20px auto;
   text-align: center;
 }
-
+p.big {
+  font-weight: bold;
+}
 p a {
   color: #231F20;
 }
@@ -270,12 +282,26 @@ p a {
   h2 {
     font-size: 26px;
   }
+  h2.section {
+    font-size: 22px;
+    text-align: left;
+  }
   p {
+    font-size: 18px;
     line-height: 32px;
+    text-align: left;
+  }
+  p.big {
+    font-size: 22px;
+  }
+  .button {
+    display: block;
   }
   .button a{
     font-size: 20px;
     padding: 10px;
+    width: 100%;
+    max-width: none;
   }
 }
 
