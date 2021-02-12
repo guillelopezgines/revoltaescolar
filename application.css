@@ -62,6 +62,9 @@ body {
 .lang a:hover {
   text-decoration: underline;
 }
+.lang a.active {
+  text-decoration: underline;
+}
 .page {
   background: white;
   background: #67A5B5;
