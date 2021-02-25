@@ -15,7 +15,7 @@
   <script src="/shared/js/html2canvas.min.js"></script>
   <script src="/shared/js/canvas2image.js"></script>
   <script src="/shared/js/sticky-kit.min.js"></script>
-  <script src="/shared/application.js"></script>
+  <script src="/shared/application.js?v=2"></script>
 </head>
 <body class="tool">
   <div class="layout">
@@ -24,14 +24,25 @@
       <h1>FES-TE EL CARTELL:</h1>
       <p>Aquesta eina està en fase de proves. Omple tots els camps i descarrega't la imatge. Si tens algun problema, si us plau, contacta amb nosaltres per <a href="mailto:eixample.respira@gmail.com">correu</a>.</p>
       <div class="row">
-        <label>Acció reivindicativa:</label>
+        <label>Idioma:</label>
+        <div class="shopify-select">
+          <select data-location>
+            <option value="https://www.schoolrebellion.com/poster">English</option>
+            <option value="https://www.revueltaescolar.es/poster">Español</option>
+            <option value="https://www.rebelliondesecoles.fr/poster">Français</option>
+            <option value="https://www.revoltaescolar.cat/poster" selected>Català</option>
+          </select>
+          <svg class="shopify-select-icon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+        </div>
+      </div>
+      <div class="row">
+        <label>Subtítol:</label>
         <input type="text" data-target=".poster .subtitle" placeholder="tallem el carrer Perú">
       </div>
       <div class="row">
         <label>Dia:</label>
         <div class="shopify-select">
           <select data-target=".poster .date">
-            <option>Divendres 26 de febrer</option>
             <option>Divendres 12 de març</option>
             <option>Divendres 26 de març</option>
           </select>
@@ -96,10 +107,10 @@
     <div class="right">
       <div class="container">
         <div class="poster">
-          <img class="background" src="/images/base.png">
+          <img class="background" src="/images/base-cat.png">
           <div class="text subtitle">tallem el carrer Perú</div>
           <div class="text info">
-            <b><span class="date">Divendres 26 de febrer</span></b><br>
+            <b><span class="date">Divendres 12 de març</span></b><br>
             <b><span class="time">16.30</span> h</b><br>
             <span class="location">Perú entre Selva de Mar i Fluvià</span><br>
             Durada: <span class="duration">30 minuts</span>
