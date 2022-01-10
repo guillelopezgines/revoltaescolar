@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>#RébellionDesÉcoles téléchargez l’affiche</title>
+  <meta name="description" content="Remplissez les informations et téléchargez l’image.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="/shared/application.css?v=8" media="all" rel="stylesheet" />
+  <link href="/shared/tool.css?v=7" media="all" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <script src="/shared/js/html2canvas.min.js"></script>
+  <script src="/shared/js/canvas2image.js"></script>
+  <script src="/shared/js/sticky-kit.min.js"></script>
+  <script src="/shared/application.js?v=8"></script>
+</head>
+<body class="tool">
+  <div class="layout">
+    <div class="setup">
+      <a href="/" class="back">⬅ Précédent</a>
+      <h1>TÉLÉCHARGEZ L’AFFICHE:</h1>
+      <p>Cet outil est en phase de test. Remplissez les informations et téléchargez l’image. Si vous avez des difficultés, n’hésitez pas à nous contacter par mail : <a href="mailto:eixample.respira@gmail.com">eixample.respira@gmail.com</a>.</p>
+      <div class="row">
+        <label>Langage:</label>
+        <div class="shopify-select">
+          <select data-location>
+            <a href="https://www.revoltaescolar.cat/en">English</a>
+            <a href="https://www.revoltaescolar.cat/es">Español</a>
+            <a href="https://www.revoltaescolar.cat/fr">Français</a>
+            <a href="https://www.revoltaescolar.cat">Català</a>
+          </select>
+          <svg class="shopify-select-icon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+        </div>
+      </div>
+      <div class="row">
+        <label>Description de la mobilisation:</label>
+        <input type="text" data-target=".poster .subtitle" placeholder="Nous coupons la rue de l'Horloge" value="Nous coupons la rue de l'Horloge">
+      </div>
+      <div class="row">
+        <label>Date :</label>
+        <input type="text" data-target=".poster .date" placeholder="Vendredi 7 mai" value="Vendredi 7 mai">
+      </div>
+      <div class="row">
+        <label>Heure :</label>
+        <input type="text" data-target=".poster .time" placeholder="16h30" value="16h30">
+      </div>
+      <div class="row">
+        <label>Lieu :</label>
+        <input type="text" data-target=".poster .location" placeholder="Rue de l’Horloge avec Théâtre" value="Rue de l’Horloge avec Théâtre">
+      </div>
+      <div class="row">
+        <label>Durée :</label>
+        <input type="text" data-target=".poster .duration" placeholder="Durée : 16h30" value="Durée : 16h30">
+      </div>
+      <div class="row">
+        <label>Logo des organisateurs :</label>
+        <input type="file" accept="image/*" data-target=".summons-1" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-2" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-3" data-parent=".summons .images"/>
+        <input type="file" accept="image/*" data-target=".summons-4" data-parent=".summons .images"/>
+      </div>
+      <div class="row">
+        <label>Logo des entités qui soutiennent :</label>
+        <input type="file" accept="image/*" data-target=".support-1" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-2" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-3" data-parent=".support .images"/>
+        <input type="file" accept="image/*" data-target=".support-4" data-parent=".support .images"/>
+      </div>
+      <div class="row">
+        <a class="download" href="" data-action="download">Télécharger</a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="container">
+        <div class="poster">
+          <img class="background" src="images/base-fr.png?v=1">
+          <div class="text subtitle">Nous coupons la rue de l'Horloge</div>
+          <div class="text info">
+            <b><span class="date">Vendredi 7 mai</span></b><br>
+            <b><span class="time">16h30</span></b><br>
+            <span class="location">Rue de l’Horloge avec Théâtre</span><br>
+            <span class="duration">Durée : 30 minutes</span>
+          </div>
+          <div class="logos">
+            <div class="section summons">
+              <div class="text"><span style="white-space: nowrap;">Organisateurs :</span></div>
+              <div class="images">
+                <img src="images/logo-afa.jpg" class="summons-1">
+              </div>
+            </div>
+            <div class="section support">
+              <div class="text" style="display: none;"><span style="white-space: nowrap;">Avec le soutien de :</span></div>
+              <div class="images">
+              </div>
+            </div>
+          </div>
+          <div class="url">
+            <div class="text">Plus d’informations : <u>www.revoltaescolar.cat/fr</u></div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
