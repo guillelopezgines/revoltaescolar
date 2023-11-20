@@ -364,6 +364,12 @@ p a.bold {
   }
 }
 
+@media (max-width: 600px){
+  .column {
+    width: 100%;
+  }
+}
+
 @media (max-width: 420px){
   .inner {
     padding: 0 15px;
