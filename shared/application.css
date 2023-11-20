@@ -224,8 +224,8 @@ p a.bold {
   display: flex;
 }
 .column {
-  flex: 50%;
   float: left;
+  width: 50%;
   padding: 10px;
 }
 .talls_v2 h2.city {
