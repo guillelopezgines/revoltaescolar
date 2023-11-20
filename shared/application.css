@@ -154,6 +154,12 @@ p a.bold {
 .menu .button:last-child {
   margin-right: 0;
 }
+.menu .button_xxss {
+  margin: 0 10px 20px 0;
+}
+.menu .button_xxss:last-child {
+  margin-right: 0;
+}
 .talls {
   background: #7BC4D6;
   padding: 40px 0;
