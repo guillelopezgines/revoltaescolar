@@ -223,9 +223,10 @@ p a.bold {
   padding: 40px 0;
   display: flex;
 }
-.talls_v2 .columna {
+.column {
   flex: 50%;
   float: left;
+  padding: 10px;
 }
 .talls_v2 h2.city {
   text-align: left;
@@ -408,7 +409,7 @@ p a.bold {
   .button {
     display: block;
   }
-  .talls_v2 .columna {
+  .column {
     flex: 100%;
   }
 }
@@ -440,7 +441,7 @@ p a.bold {
     font-size: 18px;
     padding: 8px;
   }
-  .talls_v2 .columna {
+  .column {
     flex: 100%;
   }
 }
