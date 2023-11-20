@@ -191,10 +191,6 @@ p a.bold {
   padding: 40px 0;
   display: flex;
 }
-.talls_v2 .header {
-  flex: 100%;
-  float: center;
-}
 .talls_v2 .inner {
   flex: 50%;
   float: left;
