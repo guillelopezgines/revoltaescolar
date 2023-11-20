@@ -114,6 +114,7 @@ p a.bold {
   display: inline-block;
   cursor: pointer;
 }
+
 .button a{
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -137,6 +138,31 @@ p a.bold {
   padding: 18px 30px 14px;
 }
 .button:hover a{
+  background: rgba(244, 88, 48, 1);
+  background: #4F4671;
+  border: solid rgba(51, 51, 51, 1) 6px;
+  box-shadow: 0 0 #346766;
+  left: 9px;
+  top: 9px
+}
+.button_xxss {
+  display: inline-block;
+  cursor: pointer;
+}
+.button_xxss a{
+  display: inline-block;
+  border-radius: 10px;
+  background: #04B7B1;
+  border: solid rgba(51, 51, 51, 1) 6px;
+  box-shadow: 1px 1px #346766, 3px 3px #346766, 5px 5px #346766, 7px 7px #346766, 9px 9px #346766;
+  transition: all 0.12s ease 0s;
+  padding: 10px 30px;
+  color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.button_xxss:hover a{
   background: rgba(244, 88, 48, 1);
   background: #4F4671;
   border: solid rgba(51, 51, 51, 1) 6px;
