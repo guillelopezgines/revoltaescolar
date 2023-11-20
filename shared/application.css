@@ -225,7 +225,6 @@ p a.bold {
 .talls_v2 {
   background: #7BC4D6;
   padding: 40px 0;
-  display: flex;
 }
 .talls_v2 h2.city {
   text-align: left;
