@@ -223,7 +223,7 @@ p a.bold {
   padding: 40px 0;
   display: flex;
 }
-.talls_v2 .inner {
+.talls_v2 .columna {
   flex: 50%;
   float: left;
 }
@@ -408,7 +408,7 @@ p a.bold {
   .button {
     display: block;
   }
-  .talls_v2 .inner {
+  .talls_v2 .columna {
     flex: 100%;
   }
 }
@@ -440,7 +440,7 @@ p a.bold {
     font-size: 18px;
     padding: 8px;
   }
-  .talls_v2 .inner {
+  .talls_v2 .columna {
     flex: 100%;
   }
 }
