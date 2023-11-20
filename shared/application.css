@@ -192,8 +192,8 @@ p a.bold {
   display: flex;
 }
 .talls_v2 .inner {
-  max-width: 800px;
   flex: 50%;
+  float: left;
 }
 .talls h2.city {
   text-align: left;
@@ -219,7 +219,11 @@ p a.bold {
 .talls_v2 li u{
   font-weight: bold;
 }
-
+.talls_v2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .footer {
   background: #67CFCB;
   background: white;
