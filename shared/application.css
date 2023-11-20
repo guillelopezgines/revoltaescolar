@@ -376,6 +376,9 @@ p a.bold {
   .button {
     display: block;
   }
+  .talls_v2 .inner {
+    flex: 100%;
+  }
 }
 @media (max-width: 330px){
   .lang {
@@ -404,5 +407,8 @@ p a.bold {
   .button a{
     font-size: 18px;
     padding: 8px;
+  }
+  .talls_v2 .inner {
+    flex: 100%;
   }
 }
