@@ -410,7 +410,7 @@ p a.bold {
     display: block;
   }
   .column {
-    flex: 100%;
+    width: 100%;
   }
 }
 @media (max-width: 330px){
@@ -442,6 +442,6 @@ p a.bold {
     padding: 8px;
   }
   .column {
-    flex: 100%;
+    width: 100%;
   }
 }
