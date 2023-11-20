@@ -227,6 +227,9 @@ p a.bold {
   padding: 40px 0;
   max-width: 800px;
 }
+.talls_v2 .inner {
+  max-width: 800px;
+}
 .talls_v2 h2.city {
   text-align: left;
   margin-left: 20px;
