@@ -219,13 +219,12 @@ p a.bold {
 }
 .column {
   float: left;
-  width: 50%;
-  padding: 100px;
+  width: 33%;
+  padding: 40px;
 }
 .talls_v2 {
   background: #7BC4D6;
   padding: 40px 0;
-  max-width: 800px;
 }
 .talls_v2 .inner {
   max-width: 800px;
